@@ -1,12 +1,13 @@
 // ==UserScript==
 
-// @name          battle.net forums url enhancer
+// @name          battle.net.forum.url
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Convert URLs in clickable links in posts.
 // @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.3
+// @version       1.5
 
 // @grant         none
+
 // @require       ../../../js/UrlEnhancer.js
 
 // ==/UserScript==
