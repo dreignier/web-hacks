@@ -39,11 +39,7 @@ UrlEnhancer.prototype = {
 
     replace : function(string, captured) {
         for (url in captured) {
-            var type = captured[url];
-
-            while (string.contains(url)) {
-                string = string.replace(url, '<a href="' + url + '" class="enhanced-url enhanced-"' + type +'">' + url + '</a>');
-            }
+            string = string.replace(url, '<a href="' + url + '" class="enhanced-url enhanced-"' + captured[url] +'">' + url + '</a>');
         }
     },
 
