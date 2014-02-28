@@ -7,9 +7,12 @@
 
 // @grant         none
 // @require       ../../../js/UrlEnhancer.js
+// @resource      css ../../../css/UrlEnhancer.css
 // ==/UserScript==
 
 try {
+	GM_addStyle(GM_getResourceText('css'));
+
 	var enhancer = new UrlEnhancer({
 		filter : function(url) {
 			return !url.contains('battle.net');
