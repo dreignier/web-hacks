@@ -3,8 +3,8 @@
 // @name          battle.net.forum.sc2.profile
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Show additional information for players profiles on a mouse hover event
-// @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.0
+// @include       http*://*.battle.net/sc2/*/forum/topic/*
+// @version       1.1
 
 // @grant         none
 
@@ -16,7 +16,6 @@ try {
 		var $element = $(this),
 			url = $element.find('.forum-avatar a').attr('href'),
 			$profiles = $('a[href="' + url + '"]').parents('.forum-user').addClass('enhanced');
-
 
 		jQuery.ajax({
 			url : url,
