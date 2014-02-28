@@ -4,18 +4,14 @@
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Convert URLs in clickable links in posts.
 // @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.2
+// @version       1.3
 
-// @grant         GM_addStyle
-// @grant         GM_getResourceText
+// @grant         none
 // @require       ../../../js/UrlEnhancer.js
-// @resource      css ../../../css/UrlEnhancer.css
 
 // ==/UserScript==
 
 try {
-	GM_addStyle(GM_getResourceText('css'));
-
 	var enhancer = new UrlEnhancer({
 		filter : function(url) {
 			return !url.contains('battle.net');

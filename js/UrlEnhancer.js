@@ -63,7 +63,7 @@ UrlEnhancer.prototype = {
         // Then replace the placeholders
         for (url in captured) {
             var type = captured[url];
-            string = string.replace(new RegExp('%%%PLACEHOLDER' + index + '%%%', 'g'), '<a href="' + (type == 'email' ? 'mailto:' : '') + url + '" class="enhanced-url enhanced-' + type +'">' + url + '</a>');
+            string = string.replace(new RegExp('%%%PLACEHOLDER' + index + '%%%', 'g'), '<a href="' + (type == 'email' ? 'mailto:' : '') + url + '" color="orange" class="enhanced-url enhanced-' + type +'">' + url + '</a>');
 
             index = index + 1;
         }
