@@ -4,9 +4,10 @@
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Convert URLs in clickable links in posts.
 // @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.1
+// @version       1.2
 
 // @grant         GM_addStyle
+// @grant         GM_getResourceText
 // @require       ../../../js/UrlEnhancer.js
 // @resource      css ../../../css/UrlEnhancer.css
 
