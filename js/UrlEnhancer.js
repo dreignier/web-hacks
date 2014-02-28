@@ -42,7 +42,7 @@ UrlEnhancer.prototype = {
             var type = captured[url];
 
             while (string.contains(url)) {
-                string = string.replace(url, '<a href="' + url + '" class="enhanced-url enhanced-"' + type +'">' + href + '</a>');
+                string = string.replace(url, '<a href="' + url + '" class="enhanced-url enhanced-"' + type +'">' + url + '</a>');
             }
         }
     },

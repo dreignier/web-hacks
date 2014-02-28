@@ -3,8 +3,9 @@
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Convert URLs in clickable links in posts.
 // @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.0
+// @version       0.2
 
+// @grant         none
 // @require       ../../../js/UrlEnhancer.js
 // ==/UserScript==
 
@@ -15,9 +16,9 @@ try {
 		}
 	});
 
-	$('.topic-post:not(.blizzard)').each(function() {
-		var $post = $(this).find('.post-detail');
-		$post.html(enhancer.enhance($post.html())):
+	$('.topic-post:not(.blizzard) .post-detail').each(function() {
+		var $post = $(this);
+		$post.html(enhancer.enhance($post.html()));
 	});
 } catch (error) {
 	console.error("url.user.js");
