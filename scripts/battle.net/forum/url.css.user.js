@@ -8,7 +8,7 @@
 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
-// @resource      css ../../../csss/UrlEnhancer.css
+// @resource      css ../../../css/UrlEnhancer.css
 
 // ==/UserScript==
 
