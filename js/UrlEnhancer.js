@@ -41,6 +41,8 @@ UrlEnhancer.prototype = {
         for (url in captured) {
             string = string.replace(url, '<a href="' + url + '" class="enhanced-url enhanced-"' + captured[url] +'">' + url + '</a>');
         }
+
+        return string;
     },
 
     enhance : function(string) {
