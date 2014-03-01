@@ -13,8 +13,8 @@
 try {
 
 	$('#post-list').on('hover', '.forum-user:not(.enhanced)', function() {
-		var $element = $(this),
-			url = $element.find('.forum-avatar a').attr('href'),
+		var $element = $(this),	
+            url = $element.find('.forum-avatar a').attr('href'),
 			$profiles = $('a[href="' + url + '"]').parents('.forum-user').addClass('enhanced');
 
 		jQuery.ajax({
