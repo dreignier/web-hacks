@@ -1,6 +1,6 @@
 // ==UserScript==
 
-// @name          battle.net.forum.replay
+// @name          battle.net.forum.reply
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Improve the way to reply on battle.net forums
 // @include       http*://*.battle.net/*/forum/topic/*
