@@ -5,7 +5,7 @@
 // @description   Improve the way to reply on battle.net forums
 // @include       http*://*.battle.net/*/forum/topic/*
 // @exclude       http*://*.battle.net/*/forum/topic/*/edit
-// @version       1.0
+// @version       1.1
 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
