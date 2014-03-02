@@ -5,7 +5,7 @@
 // @description   Improve the way to reply on battle.net forums
 // @include       http*://*.battle.net/*/forum/topic/*
 // @exclude       http*://*.battle.net/*/forum/topic/*/edit
-// @version       1.5
+// @version       1.6
 
 // @grant         none
 
@@ -24,7 +24,7 @@ try {
             cleaned = true;
         }
 
-        if (showOrHide !== undefined) {
+        if (showOrHide == undefined) {
             $form.toggle();
         } else {
             $form.toggle(showOrHide);
@@ -71,7 +71,7 @@ try {
         'background' : 'none'
     });
 
-    $('.post-list').on('click', '.reply-to-post, .quote-postn .quote-button', function() {
+    $('body').on('click', '.reply-to-post, .quote-post, .quote-button', function() {
         toggle($form, true);
     });
 } catch (error) {
