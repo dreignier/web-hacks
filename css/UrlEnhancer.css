@@ -1,11 +1,11 @@
 .enhanced-url {
-	color: orange;
+    color: orange;
 }
 
 .enhanced-link {
-	text-decoration : underline;
+    text-decoration : underline;
 }
 
 .enhanced-email {
-	border-bottom : 1px dotted orange;
+    border-bottom : 1px dotted orange;
 }

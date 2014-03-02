@@ -31,25 +31,9 @@ try {
         }
     }
 
-    var $tab = $('<div />').css({
-            position : 'fixed',
-            bottom : 0,
-            left : 0,
-            right : 0,
-            height : 'auto',
-            'z-index' : 1000,
-            'border-top' : '2px solid #30a0ce',
-            'background-color' : '#011b3c'
-        }),
-
-        $tabTop = $('<div />').css({
-            width : '100%',
-            height : 38,
-            'text-align' : 'center'
-        }).appendTo($tab),
-
+    var $tab = $('<div class="reply-zone" />'),
+        $tabTop = $('<div class="reply-zone-top" />').appendTo($tab),
         $button = $('<button class="ui-button button1"><span class="button-left"><span class="button-right">REPLY</span></span></button>').appendTo($tabTop),
-
         $form = $('#new-post').appendTo($tab).hide();
 
     $tab.appendTo(document.body);
@@ -63,13 +47,7 @@ try {
     $form.find('button[type="submit"]').css('float', 'right').appendTo($form.find('.topic-form-controls'));
 
     // Fix the form appearance
-    $form.css({
-        width : 600,
-        padding : '12px 5px 0',
-        'margin-left' : ($(window).width() / 2) - 302.5,
-        'background-image' : 'none',
-        'background' : 'none'
-    });
+    $form.css('margin-left', ($(window).width() / 2) - 302.5);
 
     $('body').on('click', '.reply-to-post, .quote-post, .quote-button', function() {
         toggle($form, true);

@@ -1,20 +1,21 @@
 // ==UserScript==
 
-// @name          battle.net.forum.url.css
+// @name          battle.net.forum.reply.css
 // @namespace     https://github.com/dreignier/web-hacks
-// @description   Convert URLs in clickable links in posts.
+// @description   Improve the way to reply on battle.net forums
 // @include       http*://*.battle.net/*/forum/topic/*
+// @exclude       http*://*.battle.net/*/forum/topic/*/edit
 // @version       1.6
 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
-// @resource      css ../../../css/UrlEnhancer.css
+// @resource      css ../../../css/battle.net/forum/reply.css
 
 // ==/UserScript==
 
 try {
     GM_addStyle(GM_getResourceText('css'));
 } catch (error) {
-    console.error("url.css.user.js");
+    console.error("reply.css.user.js");
     console.error(error);
 }

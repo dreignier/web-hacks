@@ -13,17 +13,17 @@
 // ==/UserScript==
 
 try {
-	var enhancer = new UrlEnhancer({
-		filter : function(url) {
-			return !url.contains('battle.net');
-		}
-	});
+    var enhancer = new UrlEnhancer({
+        filter : function(url) {
+            return !url.contains('battle.net');
+        }
+    });
 
-	$('.topic-post:not(.blizzard) .post-detail').each(function() {
-		var $post = $(this);
-		$post.html(enhancer.enhance($post.html()));
-	});
+    $('.topic-post:not(.blizzard) .post-detail').each(function() {
+        var $post = $(this);
+        $post.html(enhancer.enhance($post.html()));
+    });
 } catch (error) {
-	console.error("url.user.js");
-	console.error(error);
+    console.error("url.user.js");
+    console.error(error);
 }
