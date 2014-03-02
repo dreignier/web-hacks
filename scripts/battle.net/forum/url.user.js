@@ -4,7 +4,7 @@
 // @namespace     https://github.com/dreignier/web-hacks
 // @description   Convert URLs in clickable links in posts.
 // @include       http*://*.battle.net/*/forum/topic/*
-// @version       1.5
+// @version       1.6
 
 // @grant         none
 
