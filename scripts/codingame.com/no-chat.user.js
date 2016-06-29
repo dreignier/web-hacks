@@ -5,7 +5,7 @@
 // @description   Remove the chat from codingame
 // @include       http*://*.codingame.com/*
 // @exclude       
-// @version       1.1
+// @version       1.2
 
 // @grant         none
 
@@ -14,9 +14,20 @@
 try {
     angular.module('chat')
 
-    .run(['chatService'], function(chatService) {
-        chatService.deleteChat();
-    });
+    .config(['$provide', function($provide) {
+        $provide.decorator('cgChatDirective', function() {
+            return {
+                restrict: 'E',
+                template: '',
+                controller: angular.noop
+            }
+        });
+
+        $provide.decorator('chatService', function($delegate) {
+            $delegate.deleteChat();
+            return $delegate;
+        });
+    }]);
 
     $(function() {
         $('body').addClass('hide_chat');
