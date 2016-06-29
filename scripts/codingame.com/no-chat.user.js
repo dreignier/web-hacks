@@ -5,7 +5,7 @@
 // @description   Remove the chat from codingame
 // @include       http*://*.codingame.com/*
 // @exclude       
-// @version       1.2
+// @version       1.3
 
 // @grant         none
 
