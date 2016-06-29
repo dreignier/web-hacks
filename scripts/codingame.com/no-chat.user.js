@@ -14,19 +14,9 @@
 try {
     angular.module('chat')
 
-    .config(['$provide', function($provide) {
-        $provide.decorator('cgChatDirective', function() {
-            return {
-                restrict: 'E',
-                template: '',
-                controller: angular.noop
-            }
-        });
-
-        $provide.decorator('chatService', function() {
-            return {};
-        });
-    }]);
+    .run(['chatService'], function(chatService) {
+        chatService.deleteChat();
+    });
 
     $(function() {
         $('body').addClass('hide_chat');
